@@ -1,0 +1,2760 @@
+<!DOCTYPE HTML>
+
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="zh"> <![endif]-->
+
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="zh"> <![endif]-->
+
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="zh"> <![endif]-->
+
+<!--[if gt IE 8]><!-->
+
+<html class="no-js" lang="zh">
+
+<!--<![endif]-->
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="keywords" content="{$web_config.web_keyword}" />
+
+    <meta name="description" content="{$web_config.web_description}" />
+
+    <meta property="qc:admins" content="2150257114602531346375636" />
+
+    <title>{$web_config.web_keyword}</title>
+
+    <link href="{$theme_dir}style/style_c.css" rel="stylesheet" type="text/css" />
+
+    <link href="{$theme_dir}style/base_c.css" rel="stylesheet" type="text/css" />
+
+    <link href="{$theme_dir}style/scroller_roll.css" rel="stylesheet" type="text/css" />
+
+    <link href="{$theme_dir}style/rolling.css" rel="stylesheet" type="text/css" />
+
+    <script src="{$theme_dir}js/jquery-1.7.1.min.js"></script>
+
+    <script type="text/javascript" src="{$theme_dir}js/jcarousellite_1.0.1.js"></script>
+
+    <!--[if lt IE 9]><script src="{$theme_dir}js/html5.js"></script><![endif]-->
+   <link href="{$theme_dir}style/myst.css" rel="stylesheet" type="text/css" />
+   
+    <script type="text/javascript">
+
+        // 自动滚动
+
+        function boxmove(d1,d2,d3,e,obj){
+
+            var speed=30;
+
+            var demo=document.getElementById(d1);
+
+            var demo1=document.getElementById(d2);
+
+            var demo2=document.getElementById(d3);
+
+            demo2.innerHTML=demo1.innerHTML;
+
+            function boxTop(){
+
+                if(demo2.offsetTop-demo.scrollTop<=0){demo.scrollTop-=demo1.offsetHeight}
+
+                else{demo.scrollTop++}
+
+            }
+
+            if(e==1){
+
+                var MoveTop=setInterval(boxTop,speed);
+
+                demo.onmouseover=function(){clearInterval(MoveTop);}
+
+                demo.onmouseout=function(){MoveTop=setInterval(boxTop,speed)}
+
+            }
+
+            if(e=="top"){
+
+                MoveTop=setInterval(boxTop,speed)
+
+                obj.onmouseout=function(){clearInterval(MoveTop);}
+
+            }
+
+        }
+
+    </script>
+
+    <style type="text/css">
+
+        div#a,div#b,div#c,div#d { float:left;}
+
+        h2 { clear:both; }
+
+        div#b,div#d,div#bb { white-space:nowrap; }
+
+        .ie6 #tab1 .tabs li { display: block; margin-top: 4px;margin-left: 2px;}
+
+        .dot{ background-color:#000;height:3px;width:3px; overflow:hidden;}
+
+        .inbox1 ul li{ background: url(templates/default/images/arrow2.jpg) 0px 11px no-repeat;}
+
+        /*.fixed-left {position: absolute; top:-377px; padding-top: 160px; width:100px; left:-130px;z-index: 9999;}*/
+
+        .fixed-left{
+
+            top: -270px !important;
+
+        }
+
+        .fixed-right{
+
+            top: -270px !important;
+
+        }
+
+        /*.fixed-left img{max-width:100%;}*/
+
+        /*.fixed-left img{cursor:pointer;}*/
+
+        /*.fixed-right {position: absolute; top:-377px; padding-top: 160px; width:100px; right:-130px;z-index: 9999;}*/
+
+        /*.fixed-right img{max-width:100%;}*/
+
+        /*.fixed-right img{cursor:pointer;}*/
+
+    </style>
+
+
+
+
+
+
+
+<!--  <script type="text/javascript">
+
+$(function(){
+
+    $("#ads").fadeIn(1500);
+
+    locking()
+
+});
+
+ function   locking(){   
+
+   document.all.ly.style.display="block";   
+
+  $("#ly").width(document.body.scrollWidth);   
+
+   $("#ly").height(document.body.scrollHeight);   
+
+};
+
+$(function(){
+
+    setTimeout(function(){
+
+        $("#ads").fadeOut(400);
+
+        document.all.ly.style.display='none';
+
+    },3500);
+
+});
+
+</script> -->
+
+
+
+
+</head>
+
+
+
+<body >
+
+
+
+<!--include file="default/libs/header_c.html"-->
+
+
+
+<!-- <div id="ly" style="position: absolute; top: 0px; filter: alpha(opacity=60); background:rgba(0,0,0,0.7);
+
+         z-index: 10; left: 0px; display: none;">
+
+</div>
+
+<div id="ads" style="margin-top:-200px; display:none; width:978px; top:50%; height:auto;  background-color:#fafafa; overflow:hidden; text-align:center;position: fixed;  left: 50%;  margin-left: -487px;z-index: 999">
+
+<a href="https://precast-bbs.kuaizhan.com/clubv2/topics/WnJ2Zhm6rCIzhYzi?from=groupmessage&isappinstalled=0"><img src="http://www.precast.com.cn/uploadfile/upfiles/2018020111445796108.jpg" border="0" alt="!"></a>
+
+</div> -->
+
+
+
+<!-- 侧边广告位 -->
+
+<!-- <script type="text/javascript">
+
+window.onscroll=function ()
+
+{
+
+    var oDiv=document.getElementById('div1');
+
+    var oA=document.getElementById('xcy');
+
+    var oClose=document.getElementById('close_div1');
+
+    var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+
+    
+
+    //oDiv.style.top=scrollTop+(document.documentElement.clientHeight-oDiv.offsetHeight)/2+'px';
+
+    var t=scrollTop+(document.documentElement.clientHeight-oDiv.offsetHeight)/2;
+
+    
+
+    if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+
+        oA.href = "http://u3058296.viewer.maka.im/k/Z11S2SXV";
+
+    }
+
+    startMove(parseInt(t));
+
+}
+
+
+
+var timer=null;
+
+
+
+function startMove(iTarget)
+
+{
+
+    var oDiv=document.getElementById('div1');
+
+    
+
+    clearInterval(timer);
+
+    timer=setInterval(function (){
+
+        var iSpeed=(iTarget-oDiv.offsetTop)/8;
+
+        iSpeed=iSpeed>0?Math.ceil(iSpeed):Math.floor(iSpeed);
+
+        
+
+        if(oDiv.offsetTop==iTarget)
+
+        {
+
+            clearInterval(timer);
+
+        }
+
+        else
+
+        {
+
+            oDiv.style.top=oDiv.offsetTop+iSpeed+'px';
+
+        }
+
+        
+
+    }, 30);
+
+}
+
+function closes(){
+
+      var oDiv=document.getElementById('div1');
+
+      oDiv.style.display = 'none';
+
+}
+
+</script>
+
+
+
+<div id="div1" style="position:absolute; left:30px;z-index: 100;top:150px;">
+
+    <button style="background: #333;width: 40px;height: 20px;color: white;font-size: 5px;border:0;float: right;" onclick="closes()">关闭</button>
+
+    <a id="xcy" href="http://www.precast.com.cn/index.php/news_detail-id-10259.html" target="_blank">
+
+    <div style="width:170px; height:425px; background:url(http://www.precast.com.cn/uploadfile/upfiles/2017111517022311332.jpg); ">
+
+    </div>
+
+    </a>
+
+</div>
+
+ -->
+
+
+
+<style type="text/css">
+
+    #ckepop .button, #ckepop .jiathis_txt{line-height:28px !important;}
+
+    .jiathis_txt{color:#5C5B5B;}
+
+    .header ul li .selected{
+
+        color: red;
+
+    }
+
+    .fixed-left {position: absolute; top:-265px; padding-top: 50px; width:100px; left:-130px;z-index: 9999;}
+
+    .fixed-left img{max-width:100%;}
+
+    .fixed-left img{cursor:pointer;}
+
+    .fixed-right {position: absolute; top:-265px; padding-top: 50px; width:100px; right:-130px;z-index: 9999;}
+
+    .fixed-right img{max-width:100%;}
+
+    .fixed-right img{cursor:pointer;}
+
+</style>
+
+<script src="/templates/default/js/jquery-1.12.3.min.js"></script>
+
+<script type="text/javascript">
+
+
+
+    /*
+
+     function stop(){
+
+     return false;
+
+     }
+
+     document.oncontextmenu=stop;
+
+     */
+
+    $(".fixed-left  .off").click(function(){
+
+        $(".fixed-left").fadeOut();
+
+    })
+
+    $(".fixed-right  .off").click(function(){
+
+        $(".fixed-right").fadeOut();
+
+    })
+
+    $(function() {
+
+        var $sidebar   = $(".fixed-left , .fixed-right"),
+
+                $window    = $($window),
+
+                offset     = $sidebar.offset(),
+
+                topPadding = 15;
+
+
+
+        $window.scroll(function() {
+
+            console.log($('.fixed-left').offset().bottom-$(window).scrollTop());
+
+            if ($window.scrollTop() > offset.top) {
+
+                $sidebar.stop().animate({
+
+                    marginTop: $window.scrollTop() - offset.top + topPadding
+
+                });
+
+                console.log($window.scrollTop());
+
+            } else {
+
+                $sidebar.stop().animate({
+
+                    marginTop: 0
+
+                });
+
+            }
+
+        });
+
+    });
+
+    $(function(){
+
+        $(".header ul li a").on("click",function(){
+
+            $(this).css("color","red");
+
+            $(this).parent().siblings().children().css("color","#5C5B5B");
+
+        })
+
+    });
+
+    $(function() {
+
+        $(document).keydown(function (event) {
+
+            if (event.keyCode == 13) {
+
+                $("#gbtn").click();
+
+//			alert('你输入的内容为：' + $('#s1').val());
+
+            }
+
+        });
+
+    })
+
+</script>
+
+<script language="javascript" type="text/javascript">
+
+    var mod='hangye';
+
+    var place='企业';
+
+    function get_palce(mods,place){
+
+        //document.getElementById('select_mod').innerHTML=mods;
+
+        document.getElementById('s1').placeholder=place+":输入关键字";
+
+        mod=mods;
+
+    }
+
+    function get_search(){
+
+        //var mod=document.getElementById('select_mod').innerHTML;
+
+        var keyword=$("#s1").val();
+
+        if(mod!=''){
+
+ 			if (mod=='hangye'){
+
+				window.location.href="http://show.precast.com.cn/search_merchant.html?select_id=1&keyword="+keyword;
+
+            	
+
+			}else{
+
+				window.location.href="http://precast.com.cn/index.php/"+mod+"-keyword-"+keyword+".html#";	
+
+			}
+
+        }else{
+
+            alert("请选择搜索范围");
+
+        }
+
+    }
+
+
+
+
+
+</script>
+
+
+
+<!--header-->
+
+<header class="header">
+
+    <div class="head">
+
+
+
+
+
+
+
+        {foreach item=hyade lib=get_data table="banner" where="isshow=1 and id=159 and typeid=33 ORDER BY sortid ASC, id DESC " field="id,title,url,pic" limit="1"}
+
+
+
+        <div id="header-left"><a href="{$hyade.url}"><img src="{insert name=get_pic pic=$hyade.pic}" alt=""></a></div>
+
+        {/foreach}
+
+        {foreach item=hyade lib=get_data table="banner" where="isshow=1 and id=161 and typeid=33 ORDER BY sortid ASC, id DESC " field="id,title,url,pic" limit="1"}
+
+
+
+        <div id="header-right">  <a href="{$hyade.url}"><img src="./default/images/top01.gif" alt=""></a></div>
+
+        {/foreach}
+
+        <a href="{$web_dir}"><img src="./default/images/img/gLoGo.png" style="width:200px;margin-top:30px;"/></a>
+
+        <!-- <span id="select_mod" class="grey" style="display:none">news_lists</span>-->
+
+        <div class="gsousuo rg">
+
+            <ul>
+
+
+
+                <li style="display: none"><a class="selected" href="javascript:;" onClick="get_palce('hangye','企业')" >企业</a></li>
+
+                <li><a href="javascript:;" onClick="get_palce('hangye','企业')" style="color: red;" >企业</a></li>
+
+                <li><a href="{insert name='url' mod='news_lists'}">资讯</a></li>
+
+                <li><a href="{insert name='url' mod='subject_lists'}">专栏</a></li>
+
+                <!-- <li><a href="javascript:;" onclick="get_palce('gongying_list','供求')">供应</a></li>
+
+
+
+                 <li><a href="javascript:;" onclick="get_palce('baike_lists','百科')">百科</a></li>
+
+
+
+                <li><a href="javascript:;" onclick="get_palce('baike_lists','求购')">求购</a></li>-->
+
+                <li><a href="{insert name='url' mod='subject_listyy'}">供求</a></li>
+
+
+
+                <li><a href="{insert name='url' mod='jobs'}">招聘</a></li>
+
+                <li><a href="{insert name='url' mod='pic'}">图片</a></li>
+
+                <li><a href="{insert name='url' mod='video'}">视频</a></li>
+
+            </ul>
+
+            <input type="hidden" name="table" id="table" value="" />
+
+            <input type="text" class="gtext" name="keyword" id="s1" placeholder="企业：输入关键字" onFocus="this.value=''" onkeydown='if(event.keyCode==13){do_search();}'/>
+
+            <input type="button" name="搜索" id="gbtn" value="搜索" onClick="get_search()"/>
+
+        </div>
+
+
+<!-- 
+        <div>
+
+            <a href="https://precast-bbs.kuaizhan.com/clubv2/topics/WnJ2Zhm6rCIzhYzi?from=groupmessage&isappinstalled=0">
+
+                <img src="http://www.precast.com.cn/uploadfile/upfiles/2018020113000189418.jpg">
+
+            </a>
+
+        </div> -->
+        
+
+    </div>
+
+</header>
+
+<!--nav-->
+
+<!-- <div class="gnav" style="margin-top: 110px"> -->
+
+<div class="gnav">
+
+    <div class="gnavA">
+
+        <div class="gnavB">
+
+            <div class="gnavC">
+
+                <ul style="width: 1000px;">
+
+                    <li><a href="{$web_dir}">首  页</a></li>
+
+                    <li><a target="_blank" href="{insert name='url' mod='news'}">资  讯</a></li>
+                    <li><a target="_blank" href="http://act.precast.com.cn">活  动</a></li>
+
+                    <li><a target="_blank" href="http://show.precast.com.cn/">展 厅</a></li>
+
+                    <li><a target="_blank" href="{insert name='url' mod='subject'}">专  栏</a></li>
+
+                    <li><a target="_blank" href="{insert name='url' mod='subject_list' typeid=12'}">供  求</a></li>
+
+                    <li><a target="_blank" href="{insert name='url' mod='baike'}">百  科</a></li>
+
+                    <li><a target="_blank" href="{insert name='url' mod='zhanhui'}">会  务</a></li>
+
+                    <li><a target="_blank" href="{insert name='url' mod='jobs'}">招  聘</a></li>
+
+                    <li><a target="_blank" href="{insert name='url' mod='pic'}">图  片</a></li>
+
+                    <li><a target="_blank" href="{insert name='url' mod='video'}">视  频</a></li>
+
+                    <li><a target="_blank" href="{insert name='url' mod='zhuanjia'}">智 库</a></li>
+
+                    <li><a target="_blank" href="{insert name='url' mod='news_detail-id-7930'}">互 动</a></li>
+
+                    <!-- <li><a target="_blank" href="http://www.precast.com.cn/index.php/news_detail-id-7930.html"></a>互 动</li> -->
+
+                    <!--<li><a target="_blank" href="{insert name='url' mod='zhuanjia'}">观  点</a></li>
+
+                    <li><a target="_blank" href="{insert name='url' mod='hangye'}">企  业</a></li>-->
+
+
+
+
+
+
+
+
+
+
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="ad" class="w"><!--首页头部广告-->
+
+    <ul>
+
+        {foreach item=data lib=get_data table="banner" where="typeid　=　1　AND　isshow　=　1　AND　pic<>'' ORDER　BY sortid ASC,id DESC " field="title,pic,url" limit="16"}
+
+        <li><a target="_blank" href="{$data.url}"><img src="{insert name=get_pic pic=$data.pic}" alt="{$data.title}" title="{$data.title}" /></a></li>
+
+        {/foreach}
+
+        <li><a target="_blank" href="http://show.precast.com.cn/ashow_merchant_about/topid-11-tid-16-uid-351.html"><img src="/uploadfile/upfiles/2017092716143354450.jpg" alt="浙江凌志新材料有限公司" title="浙江凌志新材料有限公司"></a></li>
+
+    </ul>
+
+</div>
+
+
+
+
+
+<?php
+
+		$db=$GLOBALS['db'];
+
+		?>
+
+<div id="main" class="w clearfix" style="position: relative;">
+		<div>
+            <a href="http://u3058296.viewer.maka.im/pcviewer/QY6O6TR8">
+                <img src="http://www.precast.com.cn/uploadfile/upfiles/2018010910170147834.gif">
+            </a>
+        </div>
+
+    <div class="left">
+
+        <div class="inbox1">
+
+            <h2>
+
+                {foreach item=data lib=get_data table="newstype" where="typeid　=　0　AND　isshow　=　1 ORDER　BY sortid desc,id desc" field="title,id" limit="12"}
+
+                <a target="_blank" href="{insert name='url' mod='news_list' typeid=$data.id}"><span class="spankg">[{$data.title}]</span></a>
+
+                {/foreach}
+
+                <a target="_blank" href="{insert name='url' mod='news'  }" class="a-plus">资讯</a>
+
+            </h2>
+
+
+
+            <div class="banner">
+
+                <div id="tab1">
+
+                    <?php
+
+						$sql="select a.title,a.id,a.pic,a.recom_url AS recom_url from ###_news AS a where a.isshow=1 AND recommend=1 AND onlypage<1 AND a.pic<>'' ORDER BY a.sortid ASC,a.id DESC limit 4";
+
+                    $list=@$GLOBALS['db']->get_all($sql);
+
+                    if($list){
+
+                    foreach($list as $mv){
+
+                    ?>
+
+
+
+                    <div class="tab-content">
+
+                        <!--<a target="_blank" href="<?php echo base::url(array("mod"=>'news_detail','id'=>$mv['id']))?>"><img src="<?php echo pub::parse_pic($mv['pic'])?>" alt="<?php echo $mv['title']?>" width="328" height="162" target="_blank"/></a>-->
+
+                        <a target="_blank" href="<?php echo base::url(array("mod"=>'news_detail','id'=>$mv['id']))?>"><img src="<?php echo pub::parse_pic($mv['pic'])?>" alt="<?php echo $mv['title']?>" width="328" height="162" target="_blank"/></a>
+
+                        <!--<p> <a target="_blank" href="<?php echo $mv['recom_url'];?>"><?php echo base::sub_str($mv['title'],50)?></a></p>-->
+
+                        <p> <a target="_blank" href="<?php echo base::url(array("mod"=>'news_detail','id'=>$mv['id']))?>"><?php echo base::sub_str($mv['title'],50)?></a></p>
+
+                    </div>
+
+                    <?php } ?>
+
+                    <ul class="tabs">
+
+                        <?php  foreach($list as $mv){
+
+						 ?>
+
+                        <li id="indexpicshow"><img src="<?php echo pub::parse_pic($mv['pic'])?>" alt="<?php echo $mv['title']?>" width="78" height="50" /></li>
+
+                        <?php } ?>
+
+                    </ul>
+
+                    <?php
+
+						}else{
+
+						?>
+
+                    <p>读取数据出错</p>
+
+                    <?php
+
+						}
+
+						?>
+
+                </div>
+
+            </div>
+
+            {foreach item=data lib=get_data table="news AS a " where=" a.isshow=1 AND a.onlypage=0 ORDER　BY a.sortid ASC,a.id DESC " field="a.title as atitle,a.id,a.abstract,a.content" limit="1"}
+
+            { if $data.error}
+
+            <div style=" text-align:center; text-style-type:none">{$data.error}</div>
+
+            {else}
+
+            <a href="{insert name='url' mod='news_detail' id=$data.id}" class="p1" target="_blank">{$data.atitle|}</a>
+
+            <!--<p class="p2"><a target="_blank" href="{insert name='url' mod='news_detail' id=$data.id}" target="_blank">{$data.abstract|truncate:120,true}</a></p>-->
+
+            {/if}
+
+            {/foreach}
+
+            <ul class="ul1 ul1-plus" >
+
+                {foreach item=data lib=get_data table="news AS a LEFT JOIN ###_newstype AS b ON a.typeid=b.id " where=" a.isshow　=　1 AND a.onlypage=0  ORDER　BY a.sortid ASC,a.id DESC " field="a.title as atitle,a.typeid,b.title as btitle,b.id as bid,a.id" limit="1,8"}
+
+                <li style="overflow:hidden"><!--<span class="spankg"><a target="_blank" href="{insert name='url' mod='news_list' typeid=$data.typeid}">[{insert name='getparent' id="$data.bid" item=parent}]</a> </span>--><a target="_blank" href="{insert name='url' mod='news_detail' id=$data.id}" target="_blank">{$data.atitle|truncate:60,false}</a></li>
+
+                {/foreach}
+
+            </ul>
+
+        </div>
+
+
+
+        <!--资讯栏目下方广告-->
+
+        <!--添加两个图片-->
+
+        <div class="banner2" style=" border-top:0px;">
+
+            <ul>
+
+                <!--<li style="float:left;padding:0px 5px 0 5px;max-height:65px;overflow:hidden;"><a target="_blank" target="_blank" href="http://www.bicchina.com.cn"><img width="680" src="/uploadfile/upfiles/2015082116414167729.gif" alt="2015上海国际建筑工业化展览会 (BIC2015)" title="71" /></a></li>-->
+
+                <!-- <li style="float:left;padding:0px 5px 0 5px;max-height:70px;overflow:hidden;"><a target="_blank" target="_blank" href="http://www.bicchina.com.cn">
+
+
+
+                     <img width="680" style="max-height:70px;" src="/uploadfile/upfiles/2016031116382474488.gif" alt="2016上海国际建筑工业化展览会 (BIC2016)" title="2016上海国际建筑工业化展览会 (BIC2016)"></a></li>
+
+ -->
+
+
+
+                {foreach item=hyader lib=get_data table="banner" where="isshow=1 and typeid=31 ORDER BY sortid ASC, id DESC " field="id,title,url,pic" limit="1"}
+
+                {if $hyader.pic}
+
+                <li style="float:left;padding:0px 5px 0 5px;max-height:70px;overflow:hidden;">
+
+                    <a target="_blank" href="{$hyader.url}">
+
+                        <img  width="680" style="max-height:70px;" src="{insert name=get_pic pic=$hyader.pic}"
+
+                              alt="{$hyader.title}" title="{$hyader.title}" /></a></li>
+
+                {/if}
+
+                {/foreach}
+
+
+
+
+
+
+
+            </ul>
+
+        </div>
+
+
+
+
+
+        <div class="inbox2 height-plus2">
+
+            <h2>
+
+                <!--{foreach item=data lib=get_data table="subjecttype" where="typeid　=　0　AND　isshow　=　1 ORDER　BY sortid DESC,id DESC " field="title,id" limit="12"}
+
+            <a target="_blank" href="{insert name='url' mod='subject_list' typeid=$data.id}"><span class="spankg">[{$data.title}]</span></a>
+
+            {/foreach}-->
+
+                <a target="_blank" href="{insert name='url' mod='subject_list' typeid=4}" class="a-plus">装配式建筑学院</a>
+
+                <!--<a target="_blank" href="http://precast.com.cn/index.php/news_detail-id-736.html" target="_blank" class="tw" title="提问"></a>
+
+                <a target="_blank" href="http://precast.com.cn/index.php/news_detail-id-737.html" class="tg" title="投稿" target="_blank"></a>-->
+
+            </h2>
+
+
+
+            <ul class="ul3">
+
+                {foreach item=data lib=get_data table="subject AS a LEFT JOIN ###_subjecttype AS b ON a.typeid=b.id " where=" a.isshow　=　1 and a.typeid=4  ORDER　BY a.sortid ASC,a.id DESC " field="a.title as atitle,b.title as btitle,a.id,b.id as bid" limit="5"}
+
+                { if $data.error}
+
+                <li>{$data.error}</li>
+
+                {else}
+
+                <li><!--<span class="spankg">[<a target="_blank" href="{insert name='url' mod='subject_list' typeid=$data.bid}">{$data.btitle}</a>] </span>--><a target="_blank" href="{insert name='url' mod='subject_detail' id=$data.id}" target="_blank">{$data.atitle|truncate:38,false}</a></li>
+
+                {/if}
+
+                {/foreach}
+
+            </ul>
+
+        </div>
+
+        <div class="inbox2 height-plus2" style=" float:right;">
+
+            <h2>
+
+                <!--{foreach item=data lib=get_data table="subjecttype" where="typeid　=　0　AND　isshow　=　1 ORDER　BY sortid DESC,id DESC " field="title,id" limit="12"}
+
+            <a target="_blank" href="{insert name='url' mod='subject_list' typeid=$data.id}"><span class="spankg">[{$data.title}]</span></a>
+
+            {/foreach}-->
+
+                <a target="_blank" href="{insert name='url' mod='subject_list' typeid=27}" class="a-plus">BIC专栏</a>
+
+                <!--<a target="_blank" href="http://precast.com.cn/index.php/news_detail-id-736.html" target="_blank" class="tw" title="提问"></a>
+
+                <a target="_blank" href="http://precast.com.cn/index.php/news_detail-id-737.html" class="tg" title="投稿" target="_blank"></a>-->
+
+            </h2>
+
+
+
+            <ul class="ul3">
+
+                {foreach item=data lib=get_data table="subject AS a LEFT JOIN ###_subjecttype AS b ON a.typeid=b.id " where=" a.isshow　=　1 and a.typeid in (62,63,61,47,27,46,48) and  a.reright=1  ORDER　BY a.sortid ASC,a.id DESC " field="a.title as atitle,b.title as btitle,a.id,b.id as bid" limit="5"}
+
+                { if $data.error}
+
+                <li>{$data.error}</li>
+
+                {else}
+
+                <li><a  href="{insert name='url' mod='subject_detail' id=$data.id}" target="_blank">{$data.atitle|truncate:38,false}</a></li>
+
+                {/if}
+
+                {/foreach}
+
+            </ul>
+
+        </div>
+
+        <div class="banner2">
+
+            {foreach item=adzh lib=get_data table="banner" where="isshow=1 and typeid=17" field="url,pic,title"}
+
+            {if $adzh.pic}
+
+            <a target="_blank"  href="{$adzh.url}"><img width="345" style="max-height:70px;padding-right:5px;" src="{insert name=get_pic pic=$adzh.pic}" alt="{$adzh.title}" title="{$adzh.title}" /></a>
+
+            {/if}
+
+            {/foreach}
+
+
+
+            {foreach item=adzh lib=get_data table="banner" where="isshow=1 and typeid=18" field="url,pic,title"}
+
+            {if $adzh.pic}
+
+            <a target="_blank"  href="{$adzh.url}"><img width="325" style="max-height:70px;padding-left:5px;" src="{insert name=get_pic pic=$adzh.pic}" alt="{$adzh.title}" title="{$adzh.title}" /></a>
+
+            {/if}
+
+            {/foreach}
+
+
+
+            <ul>
+
+                       <!--                          <li style="float:left;padding:0px 5px 0 5px;max-height:70px;overflow:hidden;">
+
+                    <a target="_blank" href="http://www.precast.com.cn/index.php/news_detail-id-10259.html">
+
+                        <img width="680" style="max-height:70px;" src="/uploadfile/upfiles/2017111711534371641.jpg" alt="picture" title="picture">
+
+                        </a>
+
+                        </li> -->
+
+                                
+
+
+
+
+
+
+
+            </ul>
+
+        </div>
+
+
+
+
+
+        <div class="inbox2 height-plus2">
+
+            <h2>
+
+                <!--{foreach item=data lib=get_data table="subjecttype" where="typeid　=　0　AND　isshow　=　1 ORDER　BY sortid DESC,id DESC " field="title,id" limit="12"}
+
+            <a target="_blank" href="{insert name='url' mod='subject_list' typeid=$data.id}"><span class="spankg">[{$data.title}]</span></a>
+
+            {/foreach}-->
+
+                <a target="_blank" href="{insert name='url' mod='subject_list' typeid=54}" class="a-plus">BIM学院</a>
+
+                <!--<a target="_blank" href="http://precast.com.cn/index.php/news_detail-id-736.html" target="_blank" class="tw" title="提问"></a>
+
+                <a target="_blank" href="http://precast.com.cn/index.php/news_detail-id-737.html" class="tg" title="投稿" target="_blank"></a>-->
+
+            </h2>
+
+
+
+            <ul class="ul3">
+
+                {foreach item=data lib=get_data table="subject AS a LEFT JOIN ###_subjecttype AS b ON a.typeid=b.id " where=" a.isshow　=　1 and a.typeid=54 ORDER　BY a.sortid ASC,a.id DESC " field="a.title as atitle,b.title as btitle,a.id,b.id as bid" limit="5"}
+
+                { if $data.error}
+
+                <li>{$data.error}</li>
+
+                {else}
+
+                <li><!--<span class="spankg">[<a target="_blank" href="{insert name='url' mod='subject_list' typeid=$data.bid}">{$data.btitle}</a>] </span>--><a target="_blank" href="{insert name='url' mod='subject_detail' id=$data.id}" target="_blank">{$data.atitle|truncate:38,false}</a></li>
+
+                {/if}
+
+                {/foreach}
+
+            </ul>
+
+        </div>
+
+        <div class="inbox2 height-plus2" style=" float:right;">
+
+            <h2>
+
+                <!--{foreach item=data lib=get_data table="subjecttype" where="typeid　=　0　AND　isshow　=　1 ORDER　BY sortid DESC,id DESC " field="title,id" limit="12"}
+
+            <a target="_blank" href="{insert name='url' mod='subject_list' typeid=$data.id}"><span class="spankg">[{$data.title}]</span></a>
+
+            {/foreach}-->
+
+                <a target="_blank" href="{insert name='url' mod='subject_list' typeid=12}" class="a-plus">供求</a>
+
+                <a href="http://u3058296.viewer.maka.im/pcviewer/4HL0BE2A" target="_blank"><span style="color: white;padding:5px;border-radius: 3px;background-color: red">提问</span></a>
+
+                <!--<a target="_blank" href="http://precast.com.cn/index.php/news_detail-id-736.html" target="_blank" class="tw" title="提问"></a>
+
+                <a target="_blank" href="http://precast.com.cn/index.php/news_detail-id-737.html" class="tg" title="投稿" target="_blank"></a>-->
+
+            </h2>
+
+
+
+            <ul class="ul3">
+
+                {foreach item=data lib=get_data table="subject AS a LEFT JOIN ###_subjecttype AS b ON a.typeid=b.id " where=" a.isshow　=　1 and a.typeid=12  ORDER　BY a.sortid ASC,a.id DESC " field="a.title as atitle,b.title as btitle,a.id,b.id as bid" limit="5"}
+
+                { if $data.error}
+
+                <li>{$data.error}</li>
+
+                {else}
+
+                <li><!--<span class="spankg">[<a target="_blank" href="{insert name='url' mod='subject_list' typeid=$data.bid}">{$data.btitle}</a>] </span>--><a target="_blank" href="{insert name='url' mod='subject_detail' id=$data.id}" target="_blank">{$data.atitle|truncate:38,false}</a></li>
+
+                {/if}
+
+                {/foreach}
+
+            </ul>
+
+        </div>
+
+        <!--
+
+            作者：1016825260@qq.com
+
+            时间：2016-03-23
+
+            描述：
+
+        -->
+
+        <div class="banner2" style=" border-top:0px;">
+
+            <ul>
+
+                <!--<li style="float:left;padding:0px 5px 0 5px;max-height:65px;overflow:hidden;"><a target="_blank" target="_blank" href="http://www.bicchina.com.cn"><img width="680" src="/uploadfile/upfiles/2015082116414167729.gif" alt="2015上海国际建筑工业化展览会 (BIC2015)" title="71" /></a></li>-->
+
+                <!-- <li style="float:left;padding:0px 5px 0 5px;max-height:70px;overflow:hidden;">
+
+
+
+                     <a target="_blank" target="_blank" href="http://www.bicchina.com.cn"><img width="680" style="max-height:70px;" src="/uploadfile/upfiles/2016031116382474488.gif" alt="2016上海国际建筑工业化展览会 (BIC2016)" title="2016上海国际建筑工业化展览会 (BIC2016)"></a></li>-->
+
+
+
+
+
+                {foreach item=hyade lib=get_data table="banner" where="isshow=1 and typeid=32 ORDER BY sortid ASC, id DESC " field="id,title,url,pic" limit="1"}
+
+                {if $hyade.pic}
+
+                <li style="float:left;padding:0px 5px 0 5px;max-height:70px;overflow:hidden;">
+
+                    <a target="_blank"  href="{$hyade.url}">
+
+                        <img  width="680" style="max-height:70px;" src="{insert name=get_pic pic=$hyade.pic}"
+
+                              alt="{$hyade.title}" title="{$hyade.title}" /></a></li>
+
+                {/if}
+
+                {/foreach}
+
+
+
+
+
+
+
+
+
+            </ul>
+
+        </div>
+
+
+
+
+
+        <div class="inbox5" style="height:93px;">
+
+            <h2>
+
+                {foreach item=data lib=get_data table="datatype" where="typeid = 2 AND isshow = 1 ORDER BY sortid DESC ,id DESC"}
+
+                <a  href="{insert name='url' mod='data_download' typeid=$data.id}" target="_blank"><span class="spankg">[{$data.title}]</span></a>
+
+                {/foreach}
+
+                <a target="_blank" href="{insert name=url mod=data_download}" class="a-plus">资料下载</a>
+
+            </h2>
+
+            <?php
+
+                    $sql="select id,title from ###_datatype where isshow=1 and typeid=0 order by sortid asc,id desc";
+
+                    $all_datatype=$GLOBALS['db']->get_all($sql);
+
+            foreach($all_datatype as $v)
+
+            {
+
+            ?>
+
+            <dl>
+
+                <!-- <dt>[<?php echo $v['title']?>]</dt> -->
+
+                <dd><div style="width:658px;margin-left:10px;">
+
+                    <?php
+
+                            $childstr = adminpub::getdatatreechildall($v['id']);
+
+                            $sql="select title,id,files from ###_data where typeid in($childstr) and isshow=1 order by sortid asc,id desc limit 0,12";
+
+                            $all_data=$GLOBALS['db']->get_all($sql);
+
+                    foreach($all_data as $k=>$vs)
+
+                    {
+
+                    echo $k==0?"":"|";
+
+                    ?>
+
+                    <a target="_blank"  style="padding-left:1px;float:none;" href="/uploadfile/upfiles/<?php echo $vs['files']?>" > <?php echo $vs['title']//base::sub_str($vs['title'],20)?></a>
+
+                    <?php
+
+                            }
+
+                            ?>
+
+                </div>
+
+                </dd>
+
+            </dl>
+
+            <?php
+
+                    }
+
+                    ?>
+
+        </div>
+
+        <!--<div class="inbox3">
+
+            <h2 style="overflow:hidden;">
+
+                 <a target="_blank" href="?mod=baike" class="a-plus float">百科</a>
+
+                 <span style="float:left; padding-left:10px;" class="span1">热词：</span>
+
+                 {foreach item=data lib=get_data table="baike" where=" isshow=1 AND hot=1 ORDER　BY sortid ASC,id DESC" field="title,id" limit="7"}
+
+             { if $data.error}
+
+                <li style="float:left;">{$data.error}</li>
+
+                {else}
+
+                 <a target="_blank" style="float:left;" href="{insert name='url' mod='baike_detail' tid='$data.id'}" class="a1" target="_blank">{$data.title}</a>
+
+                 {/if}
+
+                 {/foreach}
+
+
+
+            </h2>
+
+             {foreach key=k item=data lib=get_data table="baiketype " where=" typeid=0 and isshow=1 order by sortid asc,id desc" field="id,title,pic" name=baikelist}
+
+
+
+            <div class="box"><a target="_blank" href="{insert name='url' mod='baike'}#baikes{$data.id}" target="_blank"><img src="{$theme_dir}images/inbox3-pg{$k}.jpg" alt="" width="53" height="53" /></a><p><a target="_blank" href="{insert name='url' mod='baike'}#baikes{$data.id}">{$data.title}</a></p></div>
+
+
+
+            {/foreach}
+
+        </div>-->
+
+        <!-- 长广告位替换-->
+
+        <div class="banner2"><!--行业栏目下方广告-->
+
+            <ul>
+
+                {foreach item=hyad lib=get_data table="banner" where="isshow=1 and typeid=30 ORDER BY sortid ASC, id DESC " field="id,title,url,pic" limit="4"}
+
+                {if $hyad.pic}
+
+                <li style="float:left;padding:0px 5px 0 5px;max-height:65px;overflow:hidden;">
+
+                    <a  target="_blank" href="{$hyad.url}">
+
+                        <img width="160" src="{insert name=get_pic pic=$hyad.pic}"
+
+                             alt="{$hyad.title}" title="{$hyad.title}" /></a></li>
+
+                {/if}
+
+                {/foreach}
+
+            </ul>
+
+        </div>
+
+
+
+        <!--<div class="inbox4">
+
+            <h2>
+
+                <a target="_blank" href="{insert name='url' mod='hangye'}" class="a-plus" >推荐企业</a>
+
+            </h2>
+
+            <dl>
+
+             <?php
+
+
+
+                $sql="select * from ###_hangyetype where isshow =1 order by sortid asc,id desc";
+
+                $all_hangyetype=$GLOBALS['db']->get_all($sql);
+
+                foreach ($all_hangyetype as $k=>$v)
+
+                {
+
+             ?>
+
+
+
+                <dt><span>[</span><a target="_blank" href="<?php echo  base::url(array('mod'=>'hangye','typeid'=>$v['id']))?>"><?php echo $v['title']?></a><span style="">]</span></dt>
+
+                <dd>
+
+                 <?php
+
+                 $_tid=$v['id'];
+
+                $sql="select title,id,typeid,title_color from ###_hangye where isshow=1 and (recommend=$_tid OR recommend LIKE '$_tid#%' OR recommend LIKE '%#$_tid' OR recommend LIKE '%#$_tid#%') and (typeid=$_tid OR typeid LIKE '$_tid,%' OR typeid LIKE '%,$_tid' OR typeid LIKE '%,$_tid,%') order by sortid asc,id desc limit 14";
+
+                $all_hangye=$GLOBALS['db']->get_all($sql);
+
+
+
+                  foreach ($all_hangye as $k=>$vs)
+
+                   {
+
+
+
+                    if($k!=0) echo " | ";
+
+            ?>
+
+                 <a target="_blank" href="<?php echo base::url(array('mod'=>'hangye_detail','id'=>$vs['id']))?>" <?php if($vs['title_color']){
+
+                 ?>style="color:<?php
+
+                 echo $vs['title_color'];?>" <?php
+
+                 } ?> target="_blank"><?php echo $vs['title'] ?></a>
+
+                    <?php
+
+
+
+                }
+
+            ?>
+
+                </dd>
+
+
+
+
+
+            <?php
+
+            }
+
+            ?>
+
+            </dl>
+
+        </div>-->
+
+        <div class="gcontD gcontX">
+
+            <!--window.location.href='http://show.precast.com.cn/'; target='view_window'-->
+
+            <h3 style="cursor: pointer;" onClick="javascript:window.open('http://show.precast.com.cn/','_blank');   ">装配式建筑展厅</h3>
+
+            <div class="gcontD-nav" style="width:574px;">
+
+                <ul>
+
+                    <!--{foreach item=data from=$new_show}-->
+
+                    <li><a target="_blank" href="{$data.url}" target="_blank" title="{$data.title}">[<!--{$data.title|truncate:20}-->]</a></li>
+
+                    <!--{/foreach}-->
+
+                </ul>
+
+            </div>
+
+            <div class="gcontD-lun">
+
+                <!--{foreach item=data from=$new_show key=k}-->
+
+                <div class="gcontD-img" style="display: {if $k==0}block{else}none{/if};">
+
+                    <a target="_blank" href="{$data.url}"> <img src="{insert name=get_pic pic=$data.pic}" alt="" style="width: 687px; height: 305px" /></a>
+
+                    <!--<p><!--{$data.title|truncate:40}</p>-->
+
+                    <p>	<a target="_blank" href="{$data.url}" style="
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    height: 35px;
+
+    width: 667px;
+
+    /*background: url(../images/img/js1-bg2.png);*/
+
+    line-height: 35px;
+
+    color: #FFFFFF;
+
+
+
+    padding-left: 20px;"><!--{$data.title|truncate:40}--></a></p>
+
+                </div>
+
+                <!--{/foreach}-->
+
+
+
+                <ul id="gxiaodian">
+
+                    <!--{foreach item=data from=$new_show key=k}-->
+
+                    <li><a target="_blank" href="javascript:;" style="{if $k==0}background-color: red;{/if}"></a></li>
+
+                    <!--{/foreach}-->
+
+                </ul>
+
+            </div>
+
+            <div class="gcontD-Bm">
+
+                <ul>
+
+                    <!-- {foreach item=data from=$show_pospic}-->
+
+                    <!--<li><img src="{insert name=get_pic pic=$data.pic}" title="{$data.title}"/><a target="_blank" href="{$data.url}" style="margin-left: 13px;
+
+font-size: 12px;
+
+color: #998e87;line-height: 24px;">{$data.title|truncate:10}</a></li>-->
+
+
+
+
+
+                    <li><a target="_blank" href="{$data.url}" style="margin-left: 13px;
+
+font-size: 12px;
+
+color: #998e87;line-height: 24px;"><img src="{insert name=get_pic pic=$data.pic}" title="{$data.title}" />{$data.title|truncate:8}</a></li>
+
+
+
+
+
+                    <!-- <a target="_blank" href="{$data.url}">{$data.title}</a>-->
+
+                    <!--{/foreach}-->
+
+                </ul>
+
+            </div>
+
+            <!--<div class="gcontD-gg">
+
+                <ul>
+
+                    <li><a target="_blank" href=""><img src="./default/images/img/gj01.gif" alt="" /></a></li>
+
+                    <li><a target="_blank" href=""><img src="./default/images/img/gj02.jpg" alt="" /></a></li>
+
+                    <li><a target="_blank" href=""><img src="./default/images/img/gj03.gif" alt="" /></a></li>
+
+                    <li><a target="_blank" href=""><img src="./default/images/img/gj04.png" alt="" /></a></li>
+
+                </ul>
+
+            </div>-->
+
+        </div>
+
+        <script type="text/javascript">
+
+            $(function(){
+
+                var i=0;
+
+                function lunb(){
+
+                    if(i>$("#gxiaodian>li").length-1){
+
+                        i=-1;
+
+                    }
+
+                    i++;
+
+                    $($("#gxiaodian").children("li")[i]).children("a").css("background-color","red");
+
+                    $($("#gxiaodian").children("li")[i]).siblings("li").children("a").css("background-color","#FFFFFF");
+
+                    $($(".gcontD-img")[i]).css("display","block");
+
+                    $($(".gcontD-img")[i]).siblings(".gcontD-img").css("display","none");
+
+                }
+
+                var time=setInterval(lunb,3000);
+
+                $("#gxiaodian>li").click(function(){
+
+                    var b=$(this).index();
+
+                    clearInterval(time);
+
+                    time=null;
+
+                    $(this).children("a").css("background-color","red");
+
+                    $(this).siblings("li").children("a").css("background-color","#FFFFFF");
+
+                    $($(".gcontD-img")[b]).css("display","block");
+
+                    $($(".gcontD-img")[b]).siblings(".gcontD-img").css("display","none");
+
+                    i=b;
+
+                    time=setInterval(lunb,3000);
+
+                })
+
+            })
+
+        </script>
+
+        <!--<div class="inbox2 inbox6 height-plus">
+
+            <h2>
+
+                <a target="_blank" href="{insert name='url' mod='qiugou_list'}">[求购]</a>
+
+                <a target="_blank" href="{insert name='url' mod='gongying_list'}">[供应]</a>
+
+                <a target="_blank" href="{insert name='url' mod='gongqiu'}" class="a-plus">供求</a>
+
+            </h2>
+
+            <ul class="ul1 ul2">
+
+            <ul style="float:left;">
+
+            {foreach item=gydata lib=get_data table="gongying a left join ###_hangye b on a.companyid=b.id" where="a.isshow=1 ORDER BY a.sortid ASC, a.id DESC " field="a.*,b.title as ctitle,b.id as cid" limit="14"}
+
+            <li><a target="_blank" href="{insert name='url' mod='gongying_list'}">[供应]</a> <a target="_blank" href="{insert name='url' mod='gongying_detail' id='$gydata.id'}" target="_blank">{$gydata.title|truncate:42,false} </a><span style="float:right;"><a target="_blank" href="{insert name=url mod=hangye_detail id=$gydata.cid}" style="color:#00908B;" target="_blank">{$gydata.ctitle}</a></span></li>
+
+            {/foreach}
+
+            </ul>
+
+            <!--<ul>
+
+            {foreach item=qgdata lib=get_data table="qiugou a left join ###_hangye b on a.companyid=b.id" where=" a.isshow=1 ORDER BY a.sortid ASC,a.id DESC " field="a.*,b.title as ctitle,b.id as cid" limit="7"}
+
+            <li><a target="_blank" href="{insert name='url' mod='qiugou_list'}">[求购]</a> <a target="_blank" href="{insert name='url' mod='qiugou_detail' id='$qgdata.id'}" target="_blank">{$qgdata.title|truncate:42,false}</a><span style="float:right;"><a target="_blank" href="{insert name=url mod=hangye_detail id=$qgdata.cid}" style="color:#00908B;" target="_blank">{$qgdata.ctitle}</a></span></li>
+
+            {/foreach}
+
+            </ul>
+
+            </ul>
+
+        </div>-->
+
+        <div class="banner2">
+
+            <ul>
+
+                {foreach item=data lib=get_data table="banner" where="typeid　=　24　AND　isshow　=　1　AND　pic<>'' ORDER　BY sortid ASC,id DESC " field="title,pic,url" limit="4"}
+
+                <li style="float:left;padding:0px 5px 0 5px;max-height:65px;overflow:hidden;">
+
+                    <a target="_blank"  href="{$data.url}">
+
+                        <img width="160" src="/uploadfile/upfiles/{$data.pic}" alt="{$data.title}" title="{$data.title}">
+
+                    </a>
+
+                </li>
+
+                {/foreach}
+
+                <!--   <li style="float:left;padding:0px 5px 0 5px;max-height:65px;overflow:hidden;">
+
+                   <a target="_blank" target="_blank" href="http://precast.com.cn/index.php/hangye_detail-id-321.html">
+
+                   <img width="160" src="/uploadfile/upfiles/2013071111163234137.jpg" alt="深圳市现代营造科技有限公司" title="深圳市现代营造科技有限公司">
+
+                   </a>
+
+                   </li>
+
+                   <li style="float:left;padding:0px 5px 0 5px;max-height:65px;overflow:hidden;">
+
+                   <a target="_blank" target="_blank" href="http://www.easypcsoft.com/">
+
+                   <img width="160" src="/uploadfile/upfiles/2015042015124926164.gif" alt="卫德设计院" title="卫德设计院">
+
+                   </a>
+
+                   </li>
+
+                   <li style="float:left;padding:0px 5px 0 5px;max-height:65px;overflow:hidden;">
+
+                   <a target="_blank" target="_blank" href="http://precast.com.cn/index.php/hangye_detail-id-315.html">
+
+                   <img width="160" src="/uploadfile/upfiles/2014011615042025994.jpg" alt="润铸建筑工程(上海)有限公司" title="润铸建筑工程(上海)有限公司">
+
+                   </a>
+
+                   </li>-->
+
+            </ul>
+
+        </div>
+
+
+
+        <!--展会栏目上方广告-->
+
+        {foreach item=adzh lib=get_data table="banner" where="isshow=1 and typeid=13" field="url,pic,title"}
+
+        {if $adzh.pic}
+
+        <div class="banner2"><a target="_blank" " href="{$adzh.url}"><img width="680" style="max-height:70px;" src="{insert name=get_pic pic=$adzh.pic}" alt="{$adzh.title}" title="{$adzh.title}" /></a></div>
+
+        {/if}
+
+        {/foreach}
+
+        <div class="inbox2 inbox6 height-plus" style=" width:680px;">
+
+            <h2>
+
+                <!--{foreach item=zhanhuidata lib=get_data table="category AS a " where=" a.isshow　=　1 AND a.typeid=0 ORDER　BY a.sortid DESC,a.id DESC "}
+
+                <a target="_blank" href="{insert name='url' mod='zhanhui_list' typeid='$zhanhuidata.id'}">[{$zhanhuidata.title}]</a>
+
+                {/foreach}-->
+
+                <a target="_blank" href="{insert name=url mod=zhanhui_list typeid=1}">[展会]</a>
+
+                <a target="_blank" href="{insert name=url mod=zhanhui_list typeid=7}">[会议]</a>
+
+
+
+                <a target="_blank" href="{insert name='url' mod='zhanhui'}" class="a-plus">会务</a>
+
+            </h2>
+
+
+
+            <div class="ul1 ul2" >
+
+                <ul class="ulzhanhui">
+
+                    {foreach item=zhanhui lib=get_data table="zhanhui AS a LEFT JOIN ###_zhanhuitype AS b ON a.typeid=b.id " where=" a.isshow=1 AND a.recommend=1 ORDER BY a.sortid ASC,a.id DESC " field="a.id,a.title as title,b.id as bid,b.title as btitle,a.address,a.begintime,a.endtime" limit="7"}
+
+                    { if $zhanhui.error}
+
+                    <li>{$zhanhui.error}</li>
+
+                    {else}
+
+                    {if $zhanhui.id!=221}
+
+                    <li >
+
+                        <a target="_blank" href="{insert name=url mod=zhanhui_list typeid=$zhanhui.bid}">[{$zhanhui.btitle}]</a>
+
+                        <a target="_blank" href="{insert name='url' mod='zhanhui_detail' id='$zhanhui.id'}" >
+
+                            {$zhanhui.title|truncate:60,false}</a><span class="span1">
+
+                            {insert name=ftime format="Y-m-d" time=$zhanhui.begintime}~{insert name=ftime format="Y-m-d" time=$zhanhui.endtime}</span><span class="span1"> [{$zhanhui.address}] </span> </li>
+
+                    {/if}
+
+                    {/if}
+
+                    {/foreach}
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!--展会栏目下方广告-->
+
+        {foreach item=adzh lib=get_data table="banner" where="isshow=1 and typeid=9" field="url,pic,title"}
+
+        {if $adzh.pic}
+
+        <div class="banner2"><a target="_blank"  href="{$adzh.url}"><img width="680" style="max-height:70px;" src="{insert name=get_pic pic=$adzh.pic}" alt="{$adzh.title}" title="{$adzh.title}" /></a></div>
+
+
+
+        {/if}
+
+        {/foreach}
+
+
+
+        <div class="inbox8">
+
+            <h2 style="margin-top: 0;">
+
+                <a target="_blank" href="{insert name='url' mod='pic'}" class="a-plus">图片</a>
+
+            </h2>
+
+            <div style="width:655px; margin:0 auto;">
+
+                {foreach item=data lib=get_data table="pic" where=" isshow　=　1　AND　recommend　=　1　AND　pic<>'' ORDER　BY sortid ASC,id DESC " field="title,s_pic,id" limit="8" name=pic_list}
+
+                <div class="imgbox { if $smarty.foreach.pic_list.index ==7 or $smarty.foreach.pic_list.index==3}img-plus{/if}">
+
+                    <a href="{insert name='url' mod='pic_ppt' id=$data.id}" target="_blank"><img src="{insert name=get_pic pic=$data.s_pic}" alt="" width="148" height="100"/></a>
+
+                    <a  href="{insert name='url' mod='pic_ppt' id=$data.id}" title="{$data.title}" target="_blank">{$data.title|truncate:18,false}</a>
+
+                </div>
+
+
+
+                {/foreach}
+
+            </div>
+
+            <!--<div class="le_a">
+
+                <a target="_blank" href="{insert name='url' mod='pic_ppt' id=$data_recom_pic.0.id}"><img class="le_a_left" src="{insert name=get_pic pic=$data_recom_pic.0.s_pic}"></a>
+
+                <a target="_blank" href="{insert name='url' mod='pic_ppt' id=$data_recom_pic.1.id}"><img class="le_a_right" src="{insert name=get_pic pic=$data_recom_pic.1.s_pic}"></a>
+
+                <a target="_blank" href="{insert name='url' mod='pic_ppt' id=$data_recom_pic.2.id}"><img class="le_a_right" src="{insert name=get_pic pic=$data_recom_pic.2.s_pic}"></a>
+
+            </div>
+
+            <div class="le_a">
+
+                <a target="_blank" href="{insert name='url' mod='pic_ppt' id=$data_recom_pic.3.id}"><img class="le_a_left" src="{insert name=get_pic pic=$data_recom_pic.3.s_pic}"></a>
+
+                <a target="_blank" href="{insert name='url' mod='pic_ppt' id=$data_recom_pic.4.id}"><img class="le_a_right" src="{insert name=get_pic pic=$data_recom_pic.4.s_pic}"></a>
+
+                <a target="_blank" href="{insert name='url' mod='pic_ppt' id=$data_recom_pic.5.id}"><img class="le_a_right" src="{insert name=get_pic pic=$data_recom_pic.5.s_pic}"></a>
+
+            </div>-->
+
+        </div>
+
+        <!--图片栏目下方广告-->
+
+        {foreach item=adbottom lib=get_data table="banner" where="isshow=1 and typeid=2" field="url,pic,title"}
+
+        <div class="banner2"><a target="_blank"  href="{$adbottom.url}"><img width="680" style="max-height:70px;" src="{insert name='get_pic' pic='$adbottom.pic'}" alt="{$adbottom.title}" title="{$adbottom.title}" /></a></div>
+
+        {/foreach}
+
+    </div>
+
+    <div class="right clearfix">
+
+        <div class="rbox1" style=" border-top:0px; padding-top:0px; margin-top:0px;">
+
+            <h2>
+
+                <a target="_blank" href="{insert name='url' mod='subject_list' typeid=56}" style=" font-size:14px; color:#5C5B5B; float:none; font-weight:bold" >国家装配式建筑产业基地</a>
+
+            </h2>
+
+            <ul class="ul3">
+
+
+
+
+
+                {foreach item=data lib=get_data table="subject AS a LEFT JOIN ###_subjecttype AS b ON a.typeid=b.id " where=" a.isshow　=　1 and a.typeid=56  ORDER　BY a.sortid ASC,a.id DESC " field="a.title as atitle,b.title as btitle,a.id,b.id as bid" limit="6"}
+
+                { if $data.error}
+
+                <li>{$data.error}</li>
+
+                {else}
+
+                <li><a target="_blank" href="{insert name='url' mod='subject_detail' id=$data.id}" target="_blank">{$data.atitle|truncate:38,false}</a></li>
+
+                {/if}
+
+                {/foreach}
+
+
+
+
+
+
+
+            </ul>
+
+        </div>
+
+
+
+        <div class="banner3"><!--观点下方广告-->
+
+            {foreach item=syzjk lib=get_data table="banner" where="isshow=1 and typeid=12 ORDER BY sortid ASC, id DESC " field="id,title,url,pic" limit="1"}
+
+            <a target="_blank" target="_blank" href="{$syzjk.url}" class="imgbox"><img style="max-width:307px;" src="{insert name=get_pic pic=$syzjk.pic}" width="307" alt="{$syzjk.title}" title="{$syzjk.title}" /></a>
+
+            {/foreach}
+
+        </div>
+
+
+
+        <div class="rbox1">
+
+            <h2>
+
+                <a target="_blank" target="_blank" href="{insert name='url' mod='subject_list' typeid=52}" style=" font-size:14px; color:#5C5B5B; float:none; font-weight:bold" >工业化精装修</a>
+
+            </h2>
+
+            <ul class="ul3">
+
+
+
+
+
+                {foreach item=data lib=get_data table="subject AS a LEFT JOIN ###_subjecttype AS b ON a.typeid=b.id " where=" a.isshow　=　1 and a.typeid=52  ORDER　BY a.sortid ASC,a.id DESC " field="a.title as atitle,b.title as btitle,a.id,b.id as bid" limit="6"}
+
+                { if $data.error}
+
+                <li>{$data.error}</li>
+
+                {else}
+
+                <li><a target="_blank" href="{insert name='url' mod='subject_detail' id=$data.id}" target="_blank">{$data.atitle|truncate:38,false}</a></li>
+
+                {/if}
+
+                {/foreach}
+
+
+
+
+
+
+
+
+
+                <!--  {foreach item=listdata lib=get_data table="subject AS a LEFT JOIN ###_subjecttype AS b on a.typeid=b.id  " where=" a.isshow=1 and a.typeid=52 ORDER　BY a.sortid ASC,a.id DESC " field="a.id,a.title,b.id as bid,b.title as btitle,b.typeid as btypeid,b.isshow as bshow" limit="9"}
+
+                  <li><a target="_blank" {if $listdata.bshow} href="{insert name='url' mod='zhuanjia_detail' id='$listdata.bid'}" {/if} ><!--<span>[{insert name=zhuanjianame typeid=$listdata.btypeid title=$listdata.btitle}]</span></a> <a target="_blank" href="{insert name='url' mod='zhuanjia_news' id='$listdata.id'}">{$listdata.title|truncate:36,false}</a></li>
+
+                  {/foreach}-->
+
+            </ul>
+
+        </div>
+
+
+
+      <!--   <div class="banner3">
+
+            <a target="_blank" href="http://www.precast.com.cn/index.php/zhanhui_detail-id-284.html" class="imgbox"><img style="max-width:307px;" src="/uploadfile/upfiles/2017112112252157446.gif" width="307" alt="高峰论坛" title="高峰论坛"></a>
+
+        </div> -->
+
+
+
+
+
+<div class="rbox1">
+
+            <h2>
+
+                <a target="_blank" target="_blank" href="{insert name='url' mod='subject_list' typeid=57}" style=" font-size:14px; color:#5C5B5B; float:none; font-weight:bold" >会员栏目</a>
+
+            </h2>
+
+            <ul class="ul3">
+
+
+
+
+
+                {foreach item=data lib=get_data table="subject AS a LEFT JOIN ###_subjecttype AS b ON a.typeid=b.id " where=" a.isshow　=　1 and a.typeid=57  ORDER　BY a.sortid ASC,a.id DESC " field="a.title as atitle,b.title as btitle,a.id,b.id as bid" limit="5"}
+
+                { if $data.error}
+
+                <li>{$data.error}</li>
+
+                {else}
+
+                <li><a target="_blank" href="{insert name='url' mod='subject_detail' id=$data.id}" target="_blank">{$data.atitle|truncate:38,false}</a></li>
+
+                {/if}
+
+                {/foreach}
+
+
+
+
+
+
+
+
+
+                <!--  {foreach item=listdata lib=get_data table="subject AS a LEFT JOIN ###_subjecttype AS b on a.typeid=b.id  " where=" a.isshow=1 and a.typeid=52 ORDER　BY a.sortid ASC,a.id DESC " field="a.id,a.title,b.id as bid,b.title as btitle,b.typeid as btypeid,b.isshow as bshow" limit="9"}
+
+                  <li><a target="_blank" {if $listdata.bshow} href="{insert name='url' mod='zhuanjia_detail' id='$listdata.bid'}" {/if} ><!--<span>[{insert name=zhuanjianame typeid=$listdata.btypeid title=$listdata.btitle}]</span></a> <a target="_blank" href="{insert name='url' mod='zhuanjia_news' id='$listdata.id'}">{$listdata.title|truncate:36,false}</a></li>
+
+                  {/foreach}-->
+
+            </ul>
+
+        </div>
+
+        <div class="banner3"><!--专家库下方广告-->
+
+            {foreach item=syzjk lib=get_data table="banner" where="isshow=1 and typeid=25 ORDER BY sortid ASC, id DESC " field="id,title,url,pic" limit="1"}
+
+            <a target="_blank" target="_blank" href="{$syzjk.url}" class="imgbox"><img style="max-width:307px;" src="{insert name=get_pic pic=$syzjk.pic}" width="307" alt="{$syzjk.title}" title="{$syzjk.title}" /></a>
+
+            {/foreach}
+
+        </div>
+
+
+
+        <!--<div class="rbox2 rbox6">
+
+            <h2><a target="_blank" href="http://precast.com.cn/index.php/subject_list-typeid-52.html" style=" font-size:14px; color:#5C5B5B; float:none; font-weight:bold" >工业化精装修</a></h2>
+
+            <ul class="ul3" style="height:207px;overflow:hidden;">
+
+                {foreach item=data lib=get_data table="subject" where=" isshow=1 and typeid=52 order by sortid asc,id desc"}
+
+                <li>
+
+                    <h3><a target="_blank" href="{insert name='url' mod='subject_detail' id=$data.id}" target="_blank">{$data.title}</a></h3>
+
+                    <p><a target="_blank" href="{$data.content_link}" target="_blank">{$data.content|truncate:300:"..."}</a></p>
+
+                </li>
+
+                {/foreach}
+
+            </ul>
+
+        </div>-->
+
+
+
+
+
+        <div class="rbox1">
+
+            <h2>
+
+                <a target="_blank" target="_blank" href="/index.php/zhuanjia.html" style=" font-size:14px; color:#5C5B5B; float:none; font-weight:bold">观点</a>
+
+            </h2>
+
+            <ul class="ul3" >
+
+                {foreach item=listdata lib=get_data table="zhuanjia AS a LEFT JOIN ###_zhuanjiaku AS b on a.typeid=b.id  " where=" a.isshow=1 ORDER　BY a.sortid ASC,a.id DESC " field="a.id,a.title,b.id as bid,b.title as btitle,b.typeid as btypeid,b.isshow as bshow" limit="8"}
+
+                <li style="background: none;padding-left: 10px;"><a target="_blank" {if $listdata.bshow} href="{insert name='url' mod='zhuanjia_detail' id='$listdata.bid'}" target="_blank" {/if}><span>[{insert name=zhuanjianame typeid=$listdata.btypeid title=$listdata.btitle}]</span></a> <a target="_blank" href="{insert name='url' mod='zhuanjia_news' id='$listdata.id'}"  target="_blank">{$listdata.title|truncate:36,false}</a></li>
+
+                {/foreach}
+
+                <!-- <li><a target="_blank" href="/index.php/zhuanjia_detail-id-106.html"><span>[李　昕]</span></a> <a target="_blank" href="/index.php/zhuanjia_news-id-280.html">PC技术简介及其在实际工程中的应用</a></li>
+
+                 <li><a target="_blank" href="/index.php/zhuanjia_detail-id-5.html"><span>[谷明旺]</span></a> <a target="_blank" href="/index.php/zhuanjia_news-id-279.html">Thermomass非组合夹心墙板的结构分析和</a></li>
+
+                 <li><a target="_blank" href="/index.php/zhuanjia_detail-id-116.html"><span>[谢　俊]</span></a> <a target="_blank" href="/index.php/zhuanjia_news-id-278.html">绿色低碳建筑设计——太阳能在绿色低碳</a></li>
+
+                 <li><a target="_blank" href="/index.php/zhuanjia_detail-id-107.html"><span>[汪　杰]</span></a> <a target="_blank" href="/index.php/zhuanjia_news-id-277.html">预制装配整体式框架体系工程设计与应用</a></li>
+
+                 <li><a target="_blank" href="/index.php/zhuanjia_detail-id-55.html"><span>[郭正兴]</span></a> <a target="_blank" href="/index.php/zhuanjia_news-id-276.html">装配整体式混凝土结构关键技术研究与应</a></li>
+
+                 <li><a target="_blank" href="/index.php/zhuanjia_detail-id-99.html"><span>[詹耀裕]</span></a> <a target="_blank" href="/index.php/zhuanjia_news-id-275.html">预制混凝土中钢筋加工创新工艺</a></li>
+
+                 <li><a target="_blank" href="/index.php/zhuanjia_detail-id-50.html"><span>[樊则森]</span></a> <a target="_blank" href="/index.php/zhuanjia_news-id-274.html">樊则森所长谈装配式住宅BIM</a></li>-->
+
+            </ul>
+
+        </div>
+
+        <div class="banner3"><!--专家库下方广告-->
+
+            {foreach item=syzjk lib=get_data table="banner" where="isshow=1 and typeid=26 ORDER BY sortid ASC, id DESC " field="id,title,url,pic" limit="1"}
+
+            <a target="_blank" target="_blank" href="{$syzjk.url}" class="imgbox"><img style="max-width:307px;" src="{insert name=get_pic pic=$syzjk.pic}" width="307" alt="{$syzjk.title}" title="{$syzjk.title}" /></a>
+
+            {/foreach}
+
+        </div>
+
+        <div class="rbox5" style="height:auto;">
+
+            <h2>
+
+                <a target="_blank" style="font-size:14px; color:#5C5B5B; float:none; font-weight:bold">专业人士</a>
+
+            </h2>
+
+            {foreach item=kudata lib=get_data table="zhuanjiaku" where=" isshow=1 and rmd=1 order by sortid asc,id desc" field="id,title,pic,typeid" limit="1000"}
+
+            <a target="_blank" href="{insert name='url' mod='zhuanjia_detail' id='$kudata.id'}" class="imgbox" target="_blank">{insert name=zhuanjianame typeid=$kudata.typeid title=$kudata.title}</a>
+
+            {/foreach}
+
+            <!--   <a target="_blank" href="/index.php/zhuanjia_detail-id-95.html" class="imgbox" target="_blank">岑　岩</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-35.html" class="imgbox" target="_blank">楚先锋</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-78.html" class="imgbox" target="_blank">崔敬波</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-56.html" class="imgbox" target="_blank">陈振基</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-105.html" class="imgbox" target="_blank">杜常岭</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-104.html" class="imgbox" target="_blank">丁　宏</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-98.html" class="imgbox" target="_blank">段创锋</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-91.html" class="imgbox" target="_blank">范　悦</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-24.html" class="imgbox" target="_blank">樊　骅</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-50.html" class="imgbox" target="_blank">樊则森</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-18.html" class="imgbox" target="_blank">付灿华</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-65.html" class="imgbox" target="_blank">姜洪斌</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-63.html" class="imgbox" target="_blank">纪颖波</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-55.html" class="imgbox" target="_blank">郭正兴</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-5.html" class="imgbox" target="_blank">谷明旺</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-115.html" class="imgbox" target="_blank">何　庸</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-66.html" class="imgbox" target="_blank">韩彦军</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-39.html" class="imgbox" target="_blank">黄　昆</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-60.html" class="imgbox" target="_blank">黄建海</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-23.html" class="imgbox" target="_blank">黄小坤</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-12.html" class="imgbox" target="_blank">蒋勤俭</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-21.html" class="imgbox" target="_blank">开　彦</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-108.html" class="imgbox" target="_blank">李启明</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-106.html" class="imgbox" target="_blank">李　昕</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-88.html" class="imgbox" target="_blank">李　洁</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-87.html" class="imgbox" target="_blank">李正茂</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-68.html" class="imgbox" target="_blank">李忠富</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-57.html" class="imgbox" target="_blank">李永基</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-54.html" class="imgbox" target="_blank">李云贵</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-46.html" class="imgbox" target="_blank">李晓明</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-111.html" class="imgbox" target="_blank">李　强</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-110.html" class="imgbox" target="_blank">吕胜利</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-84.html" class="imgbox" target="_blank">鲁仲鹏</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-51.html" class="imgbox" target="_blank">刘向南</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-47.html" class="imgbox" target="_blank">刘志峰</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-42.html" class="imgbox" target="_blank">刘东卫</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-112.html" class="imgbox" target="_blank">刘文清</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-69.html" class="imgbox" target="_blank">刘燕辉</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-53.html" class="imgbox" target="_blank">林晓晖</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-13.html" class="imgbox" target="_blank">龙玉峰</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-85.html" class="imgbox" target="_blank">毛大庆</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-71.html" class="imgbox" target="_blank">聂梅生</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-22.html" class="imgbox" target="_blank">秦　珩</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-113.html" class="imgbox" target="_blank">任明昕</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-100.html" class="imgbox" target="_blank">谭　巍</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-92.html" class="imgbox" target="_blank">沈定亮</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-83.html" class="imgbox" target="_blank">沈立众</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-80.html" class="imgbox" target="_blank">孙　剑</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-76.html" class="imgbox" target="_blank">汤　磊</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-62.html" class="imgbox" target="_blank">宋春华</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-59.html" class="imgbox" target="_blank">宋　兵</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-11.html" class="imgbox" target="_blank">苏运升</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-107.html" class="imgbox" target="_blank">汪　杰</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-8.html" class="imgbox" target="_blank">王　石</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-102.html" class="imgbox" target="_blank">王翠玲</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-44.html" class="imgbox" target="_blank">王晓锋</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-38.html" class="imgbox" target="_blank">肖宁海</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-116.html" class="imgbox" target="_blank">谢　俊</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-17.html" class="imgbox" target="_blank">谢其盛</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-41.html" class="imgbox" target="_blank">薛伟辰</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-101.html" class="imgbox" target="_blank">闫红缨</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-2.html" class="imgbox" target="_blank">叶耀先</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-117.html" class="imgbox" target="_blank">叶乃阔</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-99.html" class="imgbox" target="_blank">詹耀裕</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-48.html" class="imgbox" target="_blank">郑　勇</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-75.html" class="imgbox" target="_blank">周家全</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-109.html" class="imgbox" target="_blank">周　岚</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-67.html" class="imgbox" target="_blank">周燕珉</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-103.html" class="imgbox" target="_blank">张建国</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-49.html" class="imgbox" target="_blank">张　波</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-6.html" class="imgbox" target="_blank">张　剑</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-89.html" class="imgbox" target="_blank">赵晓龙</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-81.html" class="imgbox" target="_blank">赵世强</a>
+
+               <a target="_blank" href="/index.php/zhuanjia_detail-id-73.html" class="imgbox" target="_blank">张　桦</a>-->
+
+        </div>
+
+        <!--<div class="rbox4">
+
+            <h2>
+
+                 <a target="_blank" href="{insert name=url mod='hangye'}"style=" font-size:14px; color:#5C5B5B; float:none; font-weight:bold" >企业库</a>
+
+            </h2>
+
+            <div class="marquee">
+
+            <div id="a" style="overflow:hidden;height:100px;width:305px;">
+
+            <div id="a1">
+
+            {foreach item=comdata lib=get_data table="hangye" where=" isshow=1 order by sortid asc,id desc" field="id,companyname"}
+
+            <div class="marquee_text"><a target="_blank" href="{insert name=url mod='hangye_detail' id='$comdata.id'}" target="_blank">{$comdata.companyname}</a></div>
+
+            {/foreach}
+
+            </div>
+
+            <div id="a2"></div>
+
+            </div>
+
+            <script type="text/javascript">
+
+            boxmove("a","a1","a2",1);
+
+            </script>
+
+            </div>
+
+        </div>-->
+
+        <div class="banner3"><!--专家库下方广告-->
+
+            {foreach item=syzjk lib=get_data table="banner" where="isshow=1 and typeid=27 ORDER BY sortid ASC, id DESC " field="id,title,url,pic" limit="1"}
+
+            <a target="_blank" target="_blank" href="{$syzjk.url}" class="imgbox"><img style="max-width:307px;" src="{insert name=get_pic pic=$syzjk.pic}" width="307" alt="{$syzjk.title}" title="{$syzjk.title}" /></a>
+
+            {/foreach}
+
+        </div>
+
+        <!--<div class="banner3"><!--专业人士下方广告
+
+        {foreach item=syzjk lib=get_data table="banner" where="isshow=1 and typeid=6 ORDER BY sortid ASC, id DESC " field="id,title,url,pic" limit="1"}
+
+        <a target="_blank" target="_blank" href="{$syzjk.url}" class="imgbox"><img style="max-width:307px;" src="{insert name=get_pic pic=$syzjk.pic}" width="307" alt="{$syzjk.title}" title="{$syzjk.title}" /></a>
+
+        {/foreach}
+
+        </div>-->
+
+        <div class="rbox1">
+
+            <h2><!--http://precast.com.cn/index.php/subject_list-typeid-55.html-->
+
+                <a target="_blank" href="{insert name='url' mod='subject_list typeid=9'}" style=" font-size:14px; color:#5C5B5B; float:none; font-weight:bold" >装配式钢结构、木结构</a>
+
+            </h2>
+
+            <ul class="ul3">
+
+
+
+
+
+                {foreach item=data lib=get_data table="subject AS a LEFT JOIN ###_subjecttype AS b ON a.typeid=b.id " where=" a.isshow　=　1 and  a.typeid=9  ORDER　BY a.sortid ASC,a.id DESC " field="a.title as atitle,b.title as btitle,a.id,b.id as bid" limit="6"}
+
+                { if $data.error}
+
+                <li>{$data.error}</li>
+
+                {else}
+
+                <li><a target="_blank" href="{insert name='url' mod='subject_detail' id=$data.id}" target="_blank">{$data.atitle|truncate:38,false}</a></li>
+
+                {/if}
+
+                {/foreach}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!--	{foreach item=listdataa lib=get_data table="subject AS a LEFT JOIN ###_subjecttype AS b on a.typeid=b.id  " where=" a.isshow=1 and a.typeid=55 ORDER　BY a.sortid ASC,a.id DESC " field="a.id,a.title,b.id as bid,b.title as btitle,b.typeid as btypeid,b.isshow as bshow" limit="9"}
+
+                    <li>
+
+                        <a target="_blank" {if $listdataa.bshow} href="{insert name='url' mod='zhuanjia_detail' id='$listdataa.bid'}" {/if} ></a>
+
+                        <a target="_blank" href="{insert name='url' mod='zhuanjia_news' id='$listdataa.id'}">{$listdataa.title|truncate:36,false}</a></li>
+
+                    {/foreach}-->
+
+            </ul>
+
+        </div>
+
+        <!--<div class="log-adv">
+
+            <a target="_blank" href="#">
+
+            <div class="log-adv-item" style="top: 0px; display: block;">
+
+                <div class=" animated zoomIn" style="background-image:url(/templates/default/images/add1.png);"></div>
+
+
+
+            </div>
+
+            </a>
+
+            <a target="_blank" href="#">
+
+            <div class="log-adv-item" style="background-image: url(/templates/default/images/add1.png); display: none; top: 80px;">
+
+
+
+            </div>
+
+            </a>
+
+            <a target="_blank" href="#">
+
+            <div class="log-adv-item" style="background-image: url(/templates/default/images/add1.png); display: none; top: 80px;">
+
+
+
+            </div>
+
+            </a>
+
+        </div>-->
+
+        <div class="banner3"><!--专家库下方广告-->
+
+            {foreach item=syzjk lib=get_data table="banner" where="isshow=1 and typeid=28 ORDER BY sortid ASC, id DESC " field="id,title,url,pic" limit="1"}
+
+            <a target="_blank" target="_blank" href="{$syzjk.url}" class="imgbox"><img style="max-width:307px;" src="{insert name=get_pic pic=$syzjk.pic}" width="307" alt="{$syzjk.title}" title="{$syzjk.title}" /></a>
+
+            {/foreach}
+
+        </div>
+
+        <div class="rbox1 rbox6" >
+
+            <h2>
+
+                <a target="_blank" target="_blank" href="{insert name=url mod='jobs'}"style=" font-size:14px; color:#5C5B5B; float:none; font-weight:bold" >招聘</a>
+
+            </h2>
+
+            <ul class="ul3">
+
+                {foreach item=jobdata lib=get_data table="jobs" where=" isshow=1 order by sortid asc,id desc" field="id,title,companyname,compid" limit="9"}
+
+                <li style=" padding-left:12px;"><span><a target="_blank" style="color:#e50014;" href="{insert name=url mod=jobs post=$jobdata.title}" target="_blank">{$jobdata.title}</a></span><a target="_blank" href="{insert name=url mod=jobs compid=$jobdata.compid comp=$jobdata.companyname}">{$jobdata.companyname|truncate:26,false}</a></li>
+
+                {/foreach}
+
+            </ul>
+
+        </div>
+
+        <div class="banner3"><!--专家库下方广告-->
+
+            {foreach item=syzjk lib=get_data table="banner" where="isshow=1 and typeid=29 ORDER BY sortid ASC, id DESC " field="id,title,url,pic" limit="1"}
+
+            <a target="_blank" target="_blank" href="{$syzjk.url}" class="imgbox"><img style="max-width:307px;" src="{insert name=get_pic pic=$syzjk.pic}" width="307" alt="{$syzjk.title}" title="{$syzjk.title}" /></a>
+
+            {/foreach}
+
+        </div>
+
+        <div class="rbox7" style="  padding-bottom:10px;">
+
+            <h2>
+
+                <a target="_blank" target="_blank" href="{insert name=url mod='video'}"style=" font-size:14px; color:#5C5B5B; float:none; font-weight:bold" >视频</a>
+
+            </h2>
+
+            {foreach item=data lib=get_data table="video " where=" recommend=1 and isshow=1 order by sortid asc,id desc" field="title,pic,id" name=baikelist limit="4"}
+
+            <div class="imgbox" style="position:relative;">
+
+                <a target="_blank" href="{insert name='url' mod='video_ppt' id=$data.id}" target="_blank">
+
+                    <img src="{insert name=get_pic pic=$data.pic}" alt="" width="126" height="85"/>
+
+                    <img width="30" height="30" style="position: absolute;bottom: 50px;left: 50px;" src="/templates/default/images/videoplay.png"></a>
+
+                <a target="_blank" href="{insert name='url' mod='video_ppt' id=$data.id}" alt="" title="{$data.title}" target="_blank">{$data.title|truncate:20,false}</a>
+
+            </div>
+
+
+
+            {/foreach}
+
+        </div>
+
+        {foreach item=dxad lib=get_data table="banner" where="isshow=1 and typeid=7 ORDER BY sortid ASC, id DESC " field="id,url,title,pic" limit="2"}
+
+        <div class="banner4">
+
+            <a target="_blank" target="_blank" href="{$dxad.url}" class="imgbox"><img style="max-width:307px;" src="{insert name=get_pic pic=$dxad.pic}" width="307" height="50" alt="{$dxad.title}" title="{$dxad.title}" /></a>
+
+        </div>
+
+        {/foreach}
+
+    </div>
+
+    <!--=================fixed 浮动广告  2016-08-10============-->
+
+    {include file="default/libs/heheda.html"}
+
+    <!--=================fixed 浮动广告  2016-08-10============-->
+
+</div>
+
+
+
+<div class="indexpic1">
+
+    <!--这是要改的-->
+
+    <div class="bopic1 soul" >
+
+        <div class="bopichd11" id="next1"><img src="/templates/default/images/picleft.png" /></div>
+
+        <!-- <div class="bopichd21" id="prev1"><a target="_blank" href="#"><img src="http://www.zfc.edu.cn/image/picright.png" /></a></div>-->
+
+        <div id="box1" class="indexpic21 " style="visibility: visible; overflow: hidden; position: relative; z-index: 2; left: 0px; width: 1100px;">
+
+            <ul>
+
+                {foreach item=dxad lib=get_data table="banner" where="isshow=1 and typeid=20 ORDER BY sortid ASC, id DESC " field="id,url,title,pic"}
+
+                <li><a target="_blank" target="_blank" href="{$dxad.url}"><img src="{insert name=get_pic pic=$dxad.pic}" /></a></li>
+
+                {/foreach}
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+{include file="default/libs/links_c.html"}
+
+{include file="default/libs/footer_c.html"}
+
+
+
+<script src="{$theme_dir}js/scroller_roll.js"></script>
+
+<script src="{$theme_dir}js/rolling.js"></script>
+
+<script src="{$theme_dir}js/tab.js"></script>
+
+<script>
+
+
+
+//    $(".fixed-left  .off").click(function(){
+
+//        $(".fixed-left").fadeOut();
+
+//    })
+
+//    $(".fixed-right  .off").click(function(){
+
+//        $(".fixed-right").fadeOut();
+
+//    })
+
+    $(function() {
+
+
+
+
+
+        var $sidebar   = $(".fixed-left , .fixed-right"),
+
+                $window    = $(window),
+
+                offset     = $sidebar.offset(),
+
+                topPadding = -190;
+
+        if($(window).height()<=781){
+
+            $window.scroll(function() {
+
+                if($window.scrollTop()>2500){$window.scrollTop() == 2500};
+
+                if ($window.scrollTop() > offset.top) {
+
+                    $sidebar.stop().animate({
+
+                        marginTop: $window.scrollTop() - offset.top + topPadding
+
+                    });
+
+                } else {
+
+                    $sidebar.stop().animate({
+
+                        marginTop: 0
+
+                    });
+
+                }
+
+            });
+
+        }else{
+
+            $window.scroll(function() {
+
+
+
+                if ($window.scrollTop() > offset.top) {
+
+                    $sidebar.stop().animate({
+
+                        marginTop: $window.scrollTop() - offset.top
+
+                    });
+
+                } else {
+
+                    $sidebar.stop().animate({
+
+                        marginTop: 0
+
+                    });
+
+                }
+
+            });
+
+        }
+
+
+
+
+
+
+
+
+
+        $(".off").on("click",function(){
+
+//            $(".fixed-left,.fixed-right").hide();
+
+            $(this).parent("div").hide();
+
+        })
+
+
+
+    });
+
+</script>
+
+<script>
+
+    var tab0 = new Tabs("tab1","click",0,true);
+
+</script>
+
+<script>
+
+    function submessage(){
+
+        var mcontent=$('#mymessage').val();
+
+        if(mcontent==''){
+
+            alert('请填写内容！');
+
+            return false;
+
+        }
+
+        $.post("index.php?a=ajax&mod=index_message&r="+Math.random(),{msg:mcontent,act:'addmsg'},function(data){
+
+            if(!data.error){
+
+                $('#mymessage').val(data.content);
+
+                $('#mymessage').blur();
+
+                alert(data.message);
+
+            }else{
+
+                $('#mymessage').focus();
+
+                $('#mymessage').val(data.content);
+
+                alert(data.message);
+
+            }
+
+        },"json");
+
+        //alert(mcontent);
+
+    }
+
+</script>
+
+<script src="{$theme_dir}js/jquery.scrollLeft.js"></script>
+
+<script type="text/javascript">
+
+    $(function(){
+
+        $('#weibo').kxbdMarquee({direction:'up',isEqual:false});
+
+    });
+
+</script>
+
+<script type="text/javascript">
+
+$(function(){
+
+//banner图片
+
+$('.banner_1 .show_1 ul li:eq(0)').show();
+
+var speed = 10000,iNum = 0;
+
+$('.banner_1 .focus a').bind('click',function(){
+
+var aIndex = $('.banner_1 .focus a').index(this);
+
+$('.on').removeClass('on');
+
+$(this).addClass('on');
+
+$('.banner_1 .show_1 ul li').fadeOut().eq(aIndex).fadeIn();
+
+iNum = aIndex;
+
+})
+
+var autoPlay = function(){
+
+iNum++;
+
+if(iNum == $('.banner_1 .show_1 ul li').length){
+
+iNum=0;
+
+}
+
+$('.on').removeClass('on');
+
+$('.banner_1 .focus a').eq(iNum).addClass('on');
+
+$('.banner_1 .show_1 ul li').fadeOut().eq(iNum).fadeIn(1000);
+
+};
+
+var timer = setInterval(autoPlay,speed);
+
+$('.banner_1 .show_1,.banner_1 .focus').hover(function(){
+
+clearInterval(timer);
+
+},function(){
+
+timer = setInterval(autoPlay,speed);
+
+});
+
+
+
+});
+
+</script>
+
+<!--导航gif动态图-->
+
+<script>
+
+var logInd = 0;
+
+$(function(){
+
+    var logAdv = $(".log-adv .log-adv-item");
+
+
+
+    function logAdvFn(){
+
+        //logAdv.css("top","-80px");
+
+        logAdv.eq(logInd).animate({"top":"-80px"},200,function(){
+
+            logInd++;
+
+            logAdv.eq(logInd).show().animate({"top":"0px"},200,function(){
+
+                if(logInd>=2){
+
+                    logInd=-1;
+
+                }
+
+
+
+            });
+
+            $(this).css("top","80px").hide();
+
+        });
+
+
+
+    }
+
+    setInterval(logAdvFn,3000);
+
+})
+
+
+
+</script>
+
+
+
+<!--<script type="text/javascript" src="http://www.hz-kingdee.com/templates/default/js/jquery.flexslidern.js"></script>-->
+
+<!-- <script type="text/javascript" src="templates/default/js/jquery.flexslidern.js"></script> -->
+
+<script type="text/javascript" src="templates/default/js/jcarousellite.min.js"></script>
+
+<!--<script type="text/javascript" src="http://www.zfc.edu.cn/js/jcarousellite.min.js"></script>-->
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $("#box1").jCarouselLite({
+
+            btnPrev: "#prev1",
+
+            btnNext: "#next1",
+
+            auto: 2000, //图片停留时间
+
+            scroll: 1, //每次滚动覆盖的图片个数
+
+            speed: 1000, //设置速度，0是不动。其次就是数字越大 ，移动越慢。
+
+            vertical: false, //横向（true），竖向（false）
+
+            visible: 5, //显示的数量
+
+            circular: true //是否循环
+
+        });
+
+    });
+
+</script>
+
+</body>
+
+</html>
